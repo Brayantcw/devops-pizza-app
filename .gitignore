@@ -1,0 +1,65 @@
+# Python specific ignores
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django specific ignores
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Ignore media files (if you have a media folder for user-uploaded content)
+media/
+
+# Ignore static files (if you are using Django's collectstatic)
+staticfiles/
+
+# Ignore virtual environments
+.venv/
+ENV/
+env/
+venv/
+venv.bak/
+
+# Ignore VS Code settings folder
+.vscode/
+
+# Ignore pyenv local Python versions
+.python-version
+
+# Ignore Jupyter Notebooks checkpoints
+.ipynb_checkpoints
+
+# Ignore any files named "secret" or "password"
+secret*
+password*
+
+# Ignore node_modules folder (if you use Node.js for frontend assets)
+node_modules/
+
+# Ignore JetBrains project settings
+.idea/
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore other temporary files
+*.tmp
+*.temp
+*.pid
+*.seed
+*.backup
+
+# Ignore coverage reports
+.coverage
+htmlcov/
