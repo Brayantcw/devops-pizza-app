@@ -9,20 +9,24 @@
     <table>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Email</th>
+                <th>Pizza Type</th>
                 <th>Message</th>
             </tr>
         </thead>
         <tbody>
             {% for contact in contacts %}
                 <tr>
-                    <td>{{ contact.name }}</td>
-                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.pizza_type }}</td>
                     <td>{{ contact.message }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+
+    <!-- Form for cleanup button -->
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="cleanup">Cleanup DB</button>
+    </form>
 </body>
 </html>
