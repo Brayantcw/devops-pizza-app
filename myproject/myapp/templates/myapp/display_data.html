@@ -20,10 +20,10 @@
             </tr>
         </thead>
         <tbody>
-            {% for contact in contacts %}
+            {% for order in orders %}
                 <tr>
-                    <td>{{ contact.pizza_type }}</td>
-                    <td>{{ contact.message }}</td>
+                    <td>{{ order.pizza_type }}</td>
+                    <td>{{ order.message }}</td>
                 </tr>
             {% endfor %}
         </tbody>

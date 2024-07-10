@@ -1,3 +1,7 @@
+"""
+This module contains the app configuration for the urls.
+"""
+
 from django.urls import path
 from .views import my_view, thanks_view, display_data_view
 

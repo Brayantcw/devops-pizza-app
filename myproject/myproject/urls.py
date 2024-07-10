@@ -1,3 +1,7 @@
+"""
+This module contains the app configuration for the urls.
+"""
+
 from django.contrib import admin
 from django.urls import include, path
 

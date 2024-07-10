@@ -1,3 +1,6 @@
-from django.test import TestCase
+"""
+Handle custom test
+"""
+#from django.test import TestCase
 
 # Create your tests here.
