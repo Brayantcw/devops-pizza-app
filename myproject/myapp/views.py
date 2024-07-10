@@ -3,6 +3,7 @@ This module contains the view functions for the myapp application.
 """
 
 from django.shortcuts import render, redirect
+from django.db import connection
 from .forms import MyForm
 from .models import Order
 
@@ -10,6 +11,11 @@ def my_view(request):
     """
     Handle new orders and db objects
     """
+
+    if not Order._meta.db_table in connection.introspection.table_names():
+        # If the Contact table does not exist, create it
+        with connection.schema_editor() as schema_editor:
+            schema_editor.create_model(Order)
 
     if request.method == 'POST':
         form = MyForm(request.POST)
