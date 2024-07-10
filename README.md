@@ -1,4 +1,3 @@
-%md
 # DevOps Pizza App
 
 Welcome to the DevOps Pizza App repository! This application showcases DevOps practices within a pizza ordering and delivery system.
