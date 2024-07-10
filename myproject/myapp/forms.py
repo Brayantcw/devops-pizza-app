@@ -8,5 +8,5 @@ class MyForm(forms.Form):
         ('Vegetarian', 'Vegetarian')
     ]
 
-    pizza_type = forms.ChoiceField(choices=PIZZA_TYPES, label='Pizza Types', initial='Pepperoni')
-    message = forms.CharField(widget=forms.Textarea, label='Your message')
+    pizza_type = forms.ChoiceField(choices=PIZZA_TYPES, label='Pizza Types', initial='Pepperoni', widget=forms.Select(attrs={'class': 'form-control'}))
+    message = forms.CharField(label='Your message', widget=forms.Textarea(attrs={'class': 'form-control'}))
