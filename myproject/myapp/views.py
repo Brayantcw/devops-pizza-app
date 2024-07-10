@@ -4,7 +4,7 @@ This module contains the view functions for the myapp application.
 
 from django.shortcuts import render, redirect
 from .forms import MyForm
-from .models import Orders
+from .models import Order
 
 def my_view(request):
     """
@@ -15,7 +15,7 @@ def my_view(request):
         form = MyForm(request.POST)
         if form.is_valid():
             # Save the form data to the database
-            Orders.objects.create(
+            Order.objects.create(
                 pizza_type=form.cleaned_data['pizza_type'],
                 message=form.cleaned_data['message']
             )
@@ -31,15 +31,16 @@ def thanks_view(request):
     """
     return render(request, 'myapp/thanks.html')
 
+
 def display_data_view(request):
     """
     Handle the list of orders using a tabular style
     """
-    orders = Orders.objects.all()
+    orders = Order.objects.all()
 
     if request.method == 'POST' and 'cleanup' in request.POST:
         # Handle cleanup button click
-        Orders.objects.all().delete()
+        Order.objects.all().delete()
         return redirect('display_data')  # Redirect to the display_data view after cleanup
 
     return render(request, 'myapp/display_data.html', {'orders': orders})
