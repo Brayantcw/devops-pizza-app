@@ -8,6 +8,7 @@ Welcome to the DevOps Pizza App repository! This application showcases DevOps pr
 - [Usage](#usage)
 - [Features](#features)
 - [Future Improvements](#future-improvements)
+- [Iac](#iac)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -61,7 +62,11 @@ Once installed, the application offers the following features:
 ## Future Improvements
 In future versions, the following improvements can be made:
 - Implement user authentication with separate views for users and administrators.
-- Deploy the application to a Kubernetes cluster in a cloud environment like Amazon EKS.
+- Deploy the application to a Kubernetes cluster in a cloud environment like Amazon EKS. As example I added a module and the basic terragrunt file to deploy a eks cluster. Please refer to IAC section for further details
+
+## Iac
+- The application can be installed on an EKS cluster. Since I don't have an AWS account to test it, I decided to generate the basic templates (Terraform module and Terragrunt file for EKS) as examples.
+- Using Terraform/Terragrunt and a GitHub workflow, the Terragrunt plan and apply can be configured to deploy an EKS cluster. A similar process can be used to add a Helm release module for deploying the application.
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit pull requests.

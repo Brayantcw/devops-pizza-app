@@ -1,16 +1,16 @@
 locals {
   environment = "dev"
 
-  aws_account_id = "071646905294"
+  aws_account_id = "0123456789"
   aws_profile    = "dev"
-  aws_region     = "us-west-2"
-  subnet_ids     = ["subnet-068d962ddf711831b", "subnet-01b3f9553c3dc6bfd", "subnet-0eb4d12e888eaeb02", "subnet-0e538381f9607f225"]
+  aws_region     = "us-east-1"
+  subnet_ids     = ["subnet-1", "subnet-2", "subnet-3", "subnet-4"]
 
   tags = {
     CostCenter  = "12345"
     Environment = "dev"
     Application = "IaC"
-    createdBy   = "Alex"
+    createdBy   = "Alexander"
     createdWith = "Terraform"
   }
 }
@@ -39,7 +39,7 @@ EOF
 remote_state {
   backend = "s3"
   config = {
-    bucket  = "alex-terraform-state-personal"
+    bucket  = "terraform-state-12345678-bucket"
     key     = "${path_relative_to_include()}/terraform.tfstate"
     region  = "${local.aws_region}"
     profile = "${local.aws_profile}"
