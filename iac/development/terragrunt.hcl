@@ -1,3 +1,4 @@
+# update the values according to your environment and configure the profiles accordingly 
 locals {
   environment = "dev"
 

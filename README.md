@@ -65,7 +65,7 @@ In future versions, the following improvements can be made:
 - Deploy the application to a Kubernetes cluster in a cloud environment like Amazon EKS. As example I added a module and the basic terragrunt file to deploy a eks cluster. Please refer to IAC section for further details
 
 ## Iac
-- The application can be installed on an EKS cluster. Since I don't have an AWS account to test it, I decided to generate the basic templates (Terraform module and Terragrunt file for EKS) as examples.
+- The application can be installed on an EKS cluster. Since I don't have an AWS account to test it, I decided to generate the basic templates (Terraform module and Terragrunt file for EKS) as examples. Please refer to iac and iac-modules folders.
 - Using Terraform/Terragrunt and a GitHub workflow, the Terragrunt plan and apply can be configured to deploy an EKS cluster. A similar process can be used to add a Helm release module for deploying the application.
 
 ## Contributing
