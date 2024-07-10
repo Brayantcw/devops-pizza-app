@@ -3,8 +3,12 @@ name: Build Docker image
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - "myproject/**"
   pull_request:
     branches: [ "main" ]
+    paths:
+      - "myproject/**"
 
 env:
   DOCKER_REGISTRY: ghcr.io/${{ github.repository }}
@@ -25,7 +29,6 @@ jobs:
 
     - name: Build Docker Image
       working-directory: myproject/
-
       run: | 
         IMAGE_NAME=pizzaapp
         docker build . -f Dockerfile -t $DOCKER_REGISTRY/$IMAGE_NAME:latest
